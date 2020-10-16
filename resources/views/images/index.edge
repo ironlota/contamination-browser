@@ -1,0 +1,21 @@
+@layout('layout.app')
+
+@section('content')
+  @loggedIn
+    @set('title', 'Images')
+    @set('zero_margin', false)
+    <div class="grid max-w-lg lg:max-w-none">
+    @if(images.total > 0)
+        @include('images.partials.table')
+    @else
+      <div class="col-span-12">
+        There's no image available!
+      </div>
+    @endif
+    </div>
+  @else
+    @set('title', 'Log In')
+    @set('zero_margin', true)
+    @include('session.partials.login')
+  @endloggedIn
+@endsection

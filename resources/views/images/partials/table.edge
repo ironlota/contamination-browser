@@ -1,0 +1,32 @@
+<table class="block table-auto overflow-x-auto whitespace-no-wrap lg:overflow-x-scroll">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Image</th>
+      <th class="px-4 py-2">Hash</th>
+      <th class="px-4 py-2">Date</th>
+      <th class="px-4 py-2">SKU Card</th>
+      <th class="px-4 py-2">SKU No</th>
+      <th class="px-4 py-2">SKU Prod. Day</th>
+      <th class="px-4 py-2">Tray Barcode</th>
+      <th class="px-4 py-2">LID Barcode</th>
+      <th class="px-4 py-2">Batch ID</th>
+      <th class="px-4 py-2">Infection</th>
+    </tr>
+  </thead>
+  <tbody>
+    @each(image in images.data)
+      <tr>
+        <td class="border px-4 py-2"><a href="{{ image.url }}" target="_blank">🖼 Open</a></td>
+        <td class="border px-4 py-2">{{ image.hash }}</td>
+        <td class="border px-4 py-2">{{ image.dateStr }}</td>
+        <td class="border px-4 py-2">{{ image.sku_card }}</td>
+        <td class="border px-4 py-2">{{ image.sku_number }}</td>
+        <td class="border px-4 py-2">{{ image.sku_prod_day }}</td>
+        <td class="border px-4 py-2">{{ image.tray_barcode }}</td>
+        <td class="border px-4 py-2">{{ image.lid_barcode }}</td>
+        <td class="border px-4 py-2">{{ image.batch_id }}</td>
+        <td class="border px-4 py-2">{{ image.infection }}</td>
+      </tr>
+    @endeach
+  </tbody>
+</table>

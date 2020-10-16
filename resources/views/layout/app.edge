@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{-- Meta Information --}}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+
+  {{-- Title --}}
+  <title>{{ title }} | Emmerich (EMRC) Contamination Detection</title>
+
+  {{-- Scripts --}}
+  {{--  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  --}}
+
+  {{-- CSS --}}
+  {{ style('app') }}
+</head>
+<body class="bg-gray-50">
+  {{--
+    Include a partial into the view
+    ref: http://edge.adonisjs.com/docs/partials
+    --}}
+  @include('layout.partials.header')
+
+  @if(zero_margin)
+    <div class="flex h-screen container px-4 mx-auto mt-0">
+        {{--
+        Display the section content
+        ref: http://edge.adonisjs.com/docs/layouts#_basic_example
+        --}}
+        @!section('content')
+    </div>
+  @else
+    <div class="flex w-full max-w-none h-screen container px-4 mx-auto mt-24 md:mt-32">
+        {{--
+        Display the section content
+        ref: http://edge.adonisjs.com/docs/layouts#_basic_example
+        --}}
+        @!section('content')
+    </div>
+  @endif
+</body>
+</html>
