@@ -15,5 +15,5 @@ database/*.sqlite
 .history
 .idea
 
-cert
+cert/*
 !cert/.gitkeep
