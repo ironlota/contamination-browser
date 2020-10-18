@@ -14,6 +14,7 @@ class Image extends Model {
 
   static boot() {
     super.boot()
+    this.addTrait('NoTimestamp')
     this.addHook('afterPaginate', 'GcsHook.getSignedUrlPagination')
   }
 

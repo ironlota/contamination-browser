@@ -13,9 +13,6 @@
 /** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
 
-/** @type {import('@adonisjs/lucid/src/Factory')} */
-// const Factory = use('Factory')
-
 /** @type {import('@adonisjs/lucid/src/Database')} */
 const Database = use('Database')
 
